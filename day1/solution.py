@@ -4,10 +4,10 @@ with open('calories.txt') as file:
         list.append(line.strip())
 
 calories = []
-elves = (','.join(list)).split(',,')
+elves = (' '.join(list)).split('  ')
 for elf in elves:
     totalcal = 0
-    for x in elf.split(','):
+    for x in elf.split(' '):
         totalcal += int(x)
     calories.append(totalcal)
 
