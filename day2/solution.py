@@ -3,50 +3,36 @@ with open('guide.txt') as file:
     for line in file:
         list.append(line.strip())
 
-point = 0
+p1 = 0
+p2 = 0
 for x in list:
     a = x[0]
     b = x[2]
     if a == 'A' and b == 'X':
-        point += 4 
+        p1 += 4
+        p2 += 3
     if a == 'A' and b == 'Y':
-        point += 8 
+        p1 += 8 
+        p2 += 4
     if a == 'A' and b == 'Z':
-        point += 3 
+        p1 += 3 
+        p2 += 8 
     if a == 'B' and b == 'X':
-        point += 1 
+        p1 += 1 
+        p2 += 1 
     if a == 'B' and b == 'Y':
-        point += 5 
+        p1 += 5 
+        p2 += 5 
     if a == 'B' and b == 'Z':
-        point += 9 
+        p1 += 9 
+        p2 += 9 
     if a == 'C' and b == 'X':
-        point += 7
+        p1 += 7
+        p2 += 2
     if a == 'C' and b == 'Y':
-        point += 2 
+        p1 += 2 
+        p2 += 6 
     if a == 'C' and b == 'Z':
-        point += 6 
-print(point)
-
-point = 0
-for x in list:
-    a = x[0]
-    b = x[2]
-    if a == 'A' and b == 'X':
-        point += 3 
-    if a == 'A' and b == 'Y':
-        point += 4 
-    if a == 'A' and b == 'Z':
-        point += 8 
-    if a == 'B' and b == 'X':
-        point += 1 
-    if a == 'B' and b == 'Y':
-        point += 5 
-    if a == 'B' and b == 'Z':
-        point += 9 
-    if a == 'C' and b == 'X':
-        point += 2
-    if a == 'C' and b == 'Y':
-        point += 6 
-    if a == 'C' and b == 'Z':
-        point += 7 
-print(point)
+        p1 += 6 
+        p2 += 7
+print(p1, p2)
