@@ -3,34 +3,26 @@ with open('guide.txt') as file:
     for line in file:
         list.append(line.strip())
 
+points=[]
 p1 = 0
 p2 = 0
+dict = {
+    "A X": [4, 3],
+    "A Y": [8, 4],
+    "A Z": [3, 8],
+    "B X": [1, 1],
+    "B Y": [5, 5],
+    "B Z": [9, 9],
+    "C X": [7, 2],
+    "C Y": [2, 6],
+    "C Z": [6, 7]
+}
+
 for x in list:
-    if x == "A X":
-        p1 += 4
-        p2 += 3
-    if x == "A Y":
-        p1 += 8 
-        p2 += 4
-    if x == "A Z":
-        p1 += 3 
-        p2 += 8 
-    if x == "B X":
-        p1 += 1 
-        p2 += 1 
-    if x == "B Y":
-        p1 += 5 
-        p2 += 5 
-    if x == "B Z":
-        p1 += 9 
-        p2 += 9 
-    if x == "C X":
-        p1 += 7
-        p2 += 2
-    if x == "C Y":
-        p1 += 2 
-        p2 += 6 
-    if x == "C Z":
-        p1 += 6 
-        p2 += 7
+    points += dict[x]
+for i in range(0, len(points)):
+    if not i % 2:
+        p1 += points[i]
+    else:
+        p2 += points[i]
 print(p1, p2)
