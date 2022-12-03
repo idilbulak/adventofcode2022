@@ -1,4 +1,4 @@
-with open('guide.txt') as file:
+with open('input.txt') as file:
     list = []
     for line in file:
         list.append(line.strip())
