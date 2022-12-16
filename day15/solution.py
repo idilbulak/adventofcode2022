@@ -20,4 +20,3 @@ for sx, sy, d in rst2:
         for x, y in [(sx+dx, sy+dy), (sx+dx, sy-dy), (sx-dx, sy+dy), (sx-dx, sy-dy)]:
             if (0<=x<=4_000_000 and 0<=y<=4_000_000) and all(abs(x-sx)+abs(y-sy)>d for sx,sy,d in rst2):
                 print(4_000_000 * x + y)
-                sys.exit()
